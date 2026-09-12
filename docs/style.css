@@ -1,0 +1,198 @@
+@page {
+    size: A4;
+    margin: 22mm 18mm 20mm 18mm;
+    @bottom-center {
+        content: counter(page);
+        font-family: "DejaVu Sans", sans-serif;
+        font-size: 9pt;
+        color: #666;
+    }
+    @top-right {
+        content: "FSOC Coarse Tracker \2022 Manual 0.1.0";
+        font-family: "DejaVu Sans", sans-serif;
+        font-size: 8pt;
+        color: #999;
+    }
+}
+
+@page :first {
+    @top-right {
+        content: none;
+    }
+}
+
+html {
+    font-size: 10.5pt;
+}
+
+body {
+    font-family: "DejaVu Sans", "Noto Sans", sans-serif;
+    color: #232a33;
+    line-height: 1.5;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "DejaVu Sans", "Noto Sans", sans-serif;
+    color: #123a5f;
+    break-after: avoid;
+}
+
+h1 {
+    font-size: 17pt;
+    border-bottom: 2px solid #e5eaf0;
+    padding-bottom: 6px;
+    break-before: page;
+    margin-top: 26pt;
+}
+
+h2 {
+    font-size: 13pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 11.5pt;
+    margin-top: 14pt;
+}
+
+p {
+    margin: 7pt 0;
+    text-align: justify;
+}
+
+a {
+    color: #0a68b5;
+    text-decoration: none;
+}
+
+code {
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 9pt;
+    background: #f2f4f7;
+    border: 1px solid #dde3ea;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+pre {
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 8.5pt;
+    background: #f6f8fa;
+    border: 1px solid #dde3ea;
+    border-radius: 4px;
+    padding: 8px 10px;
+    white-space: pre-wrap;
+    break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 9pt;
+    break-inside: auto;
+}
+
+th,
+td {
+    border: 1px solid #c8d0d9;
+    padding: 4px 7px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eaf0f6;
+    color: #123a5f;
+    font-weight: bold;
+}
+
+tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+.cover {
+    text-align: center;
+    padding-top: 22mm;
+    break-after: page;
+}
+
+.cover .kicker {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0a68b5;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.cover .cover-title {
+    font-size: 30pt;
+    font-weight: bold;
+    color: #123a5f;
+    letter-spacing: 1px;
+    margin: 6mm 0 2mm;
+}
+
+.cover .cover-sub {
+    font-size: 14pt;
+    font-weight: normal;
+    color: #33475c;
+    margin: 0 18mm 4mm;
+}
+
+.cover .meta {
+    margin-top: 12mm;
+    color: #5a6b7e;
+    font-size: 10pt;
+}
+
+.toc {
+    break-after: page;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 4px;
+}
+
+.toc > ul > li {
+    margin: 3pt 0;
+    font-weight: bold;
+}
+
+.toc ul ul {
+    padding-left: 18px;
+    font-weight: normal;
+}
+
+.toc a::after {
+    content: leader(". ") target-counter(attr(href), page);
+}
+
+blockquote {
+    border-left: 3px solid #0a68b5;
+    margin: 8pt 0;
+    padding: 2pt 12pt;
+    color: #445;
+    background: #f4f8fc;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dde3ea;
+    margin: 14pt 0;
+}
+
+li {
+    margin: 2.5pt 0;
+}
